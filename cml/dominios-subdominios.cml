@@ -1,0 +1,58 @@
+Domain PrestacionServiciosDelHogar{
+    domainVisionStatement = "Conectar hogares, aseguradoras, bancos y comercios que buscan soluciones a problemas del hogar relacionados con plomería, baldosería, electricidad, carpintería y pintura, con proveedores de servicios verificados (sean independientes o alguna empresa de servicios), buscando una orquestación completa desde una consulta hasta el pago y calificación del servicio prestado y soportado por una plataforma que es capaz de escalar apropiadamente para la expansión propuesta del negocio a nuevos países."
+
+    Subdomain Cotizaciones{
+        type = CORE_DOMAIN
+        domainVisionStatement = "Gestionar la creación, selección y distribución de cotizaciones a proveedores."
+    }
+
+    Subdomain GestionServicio{
+        type = CORE_DOMAIN
+        domainVisionStatement = "Orquestar el ciclo de vida del trabajo, gestionando el orden, bloqueos y manejo de trabajos paralelos."
+    }
+
+    Subdomain Marketplace{
+        type = CORE_DOMAIN
+        domainVisionStatement = "Publicar trabajos y hacer emparejamiento de demanda con proveedores disponibles."
+    }
+    Subdomain AlianzasB2B2C{
+        type = CORE_DOMAIN 
+        domainVisionStatement = "Gestionar los trabajos de siniestros e instalación con partners a través de integraciones con el sistema."
+    }
+
+    Subdomain Verificaciones{
+        type = CORE_DOMAIN
+        domainVisionStatement = "Manejar la verificación de antecedentes y documentación de proveedores por servicio y zona."
+    }
+
+    Subdomain Fintech{
+        type = CORE_DOMAIN
+        domainVisionStatement = "Gestionar wallets, pagos y micro-préstamos a proveedores usando su historial crediticio."
+    }
+
+    Subdomain AsistenteIA{
+        type =  CORE_DOMAIN
+        domainVisionStatement = "Diagnostico a través de agente IA para categoría, urgencia, ubicación y evidencia."
+    }
+
+    Subdomain ControlCalidad{
+        type = SUPPORTING_DOMAIN
+        domainVisionStatement = "Gestionar garantías y posibles disputas sobre la calidad del servicio prestado."
+    }
+
+    Subdomain Proveedores{
+        type = SUPPORTING_DOMAIN
+        domainVisionStatement = "Gestionar la información de proveedores: perfil, servicios que prestan, cobertura geográfica y reputación."
+    }
+
+    Subdomain Pagos{
+        type = GENERIC_SUBDOMAIN
+        domainVisionStatement = "Procesamiento de pagos y facturación por servicio con pasarelas externas."
+    }
+
+    Subdomain Autenticacion{
+        type = GENERIC_SUBDOMAIN
+        domainVisionStatement = "Autenticación y autorización de usuarios en la plataforma.  "
+    }    
+
+}
