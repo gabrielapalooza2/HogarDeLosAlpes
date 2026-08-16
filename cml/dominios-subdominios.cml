@@ -24,7 +24,7 @@ Domain HogarDeLosAlpes{
 
     Subdomain Fintech{
         type = CORE_DOMAIN
-        domainVisionStatement = "Gestionar wallets, pagos y micro-préstamos a proveedores usando su historial crediticio."
+        domainVisionStatement = "Gestionar wallets, y micro-préstamos a proveedores usando su historial crediticio."
     }
 
     Subdomain Cotizaciones{
