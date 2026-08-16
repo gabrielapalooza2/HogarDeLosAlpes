@@ -1,6 +1,8 @@
 {
-  "name": "HogarDeLosAlpes",
-  "image": "mcr.microsoft.com/devcontainers/java:1-17-bullseye",
+  "name": "HogarDeLosAlpes DDD",
+  "build": {
+    "dockerfile": "../Dockerfile"
+  },
   "customizations": {
     "vscode": {
       "extensions": [
