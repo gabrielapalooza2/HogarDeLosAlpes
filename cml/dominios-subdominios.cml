@@ -45,13 +45,13 @@ Domain HogarDeLosAlpes{
 
     Subdomain MonitoreoOperativo {
         type = SUPPORTING_DOMAIN
-        domainVisionStatement = "Trabajo de los agentes de gestion: monitoreo de avance, novedades y disputas."
+        domainVisionStatement = "Trabajo de los agentes para gestionar actividades de monitoreo de avance, novedades y disputas."
 
     }
 
     Subdomain ControlCalidad{
         type = SUPPORTING_DOMAIN
-        domainVisionStatement = "Gestionar garantías y posibles disputas sobre la calidad del servicio prestado."
+        domainVisionStatement = "Gestionar actividades y reglamentos para resolver disputas sobre la calidad del servicio prestado (puede variar depende del territorio)."
     }
 
     Subdomain EvidenciasYExpediente {
