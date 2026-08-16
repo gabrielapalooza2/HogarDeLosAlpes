@@ -1,6 +1,7 @@
-Domain PrestacionServiciosDelHogar{
+Domain HogarDeLosAlpes{
     domainVisionStatement = "Conectar hogares, aseguradoras, bancos y comercios que buscan soluciones a problemas del hogar relacionados con plomería, baldosería, electricidad, carpintería y pintura, con proveedores de servicios verificados (sean independientes o alguna empresa de servicios), buscando una orquestación completa desde una consulta hasta el pago y calificación del servicio prestado y soportado por una plataforma que es capaz de escalar apropiadamente para la expansión propuesta del negocio a nuevos países."
 
+    /* CORE_DOMAIN*/
     Subdomain Cotizaciones{
         type = CORE_DOMAIN
         domainVisionStatement = "Gestionar la creación, selección y distribución de cotizaciones a proveedores."
@@ -35,34 +36,31 @@ Domain PrestacionServiciosDelHogar{
         domainVisionStatement = "Diagnostico a través de agente IA para categoría, urgencia, ubicación y evidencia."
     }
 
-    Subdomain ControlCalidad{
-        type = SUPPORTING_DOMAIN
-        domainVisionStatement = "Gestionar garantías y posibles disputas sobre la calidad del servicio prestado."
-    }
+    /*SUPPORTING_DOMAIN*/
 
     Subdomain Proveedores{
         type = SUPPORTING_DOMAIN
         domainVisionStatement = "Gestionar la información de proveedores: perfil, servicios que prestan, cobertura geográfica y reputación."
     }
 
-    Subdomain MatchingYCobertura {
+    Subdomain MonitoreoOperativo {
         type = SUPPORTING_DOMAIN
-        domainVisionStatement = "Publica el trabajo a proveedores que coinciden en categoria, zona y disponibilidad; en siniestros, restringe ademas a la red homologada del partner. Mecanismo de soporte: el criterio de elegibilidad vive en Acreditacion y en ReglasDePartner; este subdominio las aplica."
+        domainVisionStatement = "Trabajo de los agentes de gestion: monitoreo de avance, novedades y disputas."
 
     }
 
-    Subdomain CoordinacionOperativa {
+    Subdomain ControlCalidad{
         type = SUPPORTING_DOMAIN
-        domainVisionStatement = "Trabajo de los ~100 agentes de gestion: monitoreo de avance, novedades y disputas. Hoy es mayormente manual sobre el monolito. Soporta el core operacional; la vision TO-BE es que los agentes trabajen sobre excepciones, no sobre cada transicion de estado."
-
+        domainVisionStatement = "Gestionar garantías y posibles disputas sobre la calidad del servicio prestado."
     }
 
     Subdomain EvidenciasYExpediente {
         type = SUPPORTING_DOMAIN
-        domainVisionStatement = "Recoleccion, consolidacion y sincronizacion de evidencias (fotos, documentos, bitacora) exigidas por partners y por auditoria interna. Critico en siniestros; no es el modelo de Trabajo, es el expediente que lo hace oponible al partner."
+        domainVisionStatement = "Recoleccion, consolidacion y sincronizacion de evidencias (fotos, documentos, bitacora) exigidas por partners y por auditoria interna."
 
-  }
+    }
 
+    /*GENERIC_SUBDOMAIN*/
     Subdomain Pagos{
         type = GENERIC_SUBDOMAIN
         domainVisionStatement = "Procesamiento de pagos y facturación por servicio con pasarelas externas."
@@ -75,9 +73,9 @@ Domain PrestacionServiciosDelHogar{
 
     Subdomain NotificacionesYComunicaciones {
         type = GENERIC_SUBDOMAIN
-        domainVisionStatement = "Mensajeria a clientes, proveedores y partners. Generico. El contenido de negocio (que se notifica) lo deciden los contextos de origen."
+        domainVisionStatement = "Mensajeria a clientes, proveedores y partners."
 
-  }
+    }
     
      
 
