@@ -2,10 +2,6 @@ Domain HogarDeLosAlpes{
     domainVisionStatement = "Conectar hogares, aseguradoras, bancos y comercios que buscan soluciones a problemas del hogar relacionados con plomería, baldosería, electricidad, carpintería y pintura, con proveedores de servicios verificados (sean independientes o alguna empresa de servicios), buscando una orquestación completa desde una consulta hasta el pago y calificación del servicio prestado y soportado por una plataforma que es capaz de escalar apropiadamente para la expansión propuesta del negocio a nuevos países."
 
     /* CORE_DOMAIN*/
-    Subdomain Cotizaciones{
-        type = CORE_DOMAIN
-        domainVisionStatement = "Gestionar la creación, selección y distribución de cotizaciones a proveedores."
-    }
 
     Subdomain GestionServicio{
         type = CORE_DOMAIN
@@ -31,10 +27,11 @@ Domain HogarDeLosAlpes{
         domainVisionStatement = "Gestionar wallets, pagos y micro-préstamos a proveedores usando su historial crediticio."
     }
 
-    Subdomain AsistenteIA{
-        type =  CORE_DOMAIN
-        domainVisionStatement = "Diagnostico a través de agente IA para categoría, urgencia, ubicación y evidencia."
+    Subdomain Cotizaciones{
+        type = CORE_DOMAIN
+        domainVisionStatement = "Gestionar la creación, selección y distribución de cotizaciones a proveedores."
     }
+
 
     /*SUPPORTING_DOMAIN*/
 
@@ -58,6 +55,11 @@ Domain HogarDeLosAlpes{
         type = SUPPORTING_DOMAIN
         domainVisionStatement = "Recoleccion, consolidacion y sincronizacion de evidencias (fotos, documentos, bitacora) exigidas por partners y por auditoria interna."
 
+    }
+
+    Subdomain AsistenteIA{
+        type =  CORE_DOMAIN
+        domainVisionStatement = "Diagnostico a través de agente IA para categoría, urgencia, ubicación y evidencia."
     }
 
     /*GENERIC_SUBDOMAIN*/
