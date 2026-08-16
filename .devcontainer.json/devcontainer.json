@@ -1,18 +1,11 @@
 {
   "name": "HogarDeLosAlpes",
-  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
-  "features": {
-    "ghcr.io/devcontainers/features/node:1": {},
-    "ghcr.io/devcontainers/features/python:1": {}
-  },
+  "image": "mcr.microsoft.com/devcontainers/java:1-17-bullseye",
   "customizations": {
     "vscode": {
       "extensions": [
-        "vscode.markdown-language-features",
-        "GitHub.copilot"
+        "contextmapper.context-mapper-vscode-extension"
       ]
     }
-  },
-  "postCreateCommand": "npm install -g http-server && python3 -m pip install matplotlib Pillow --break-system-packages",
-  "remoteUser": "root"
+  }
 }
