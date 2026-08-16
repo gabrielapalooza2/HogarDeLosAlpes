@@ -1,12 +1,16 @@
 {
-  "name": "HogarDeLosAlpes DDD",
+  "name": "Context Mapper Dev Container",
   "build": {
-    "dockerfile": "../Dockerfile"
+    "dockerfile": "Dockerfile"
   },
+  "postCreateCommand": "./gradlew clean build",
   "customizations": {
     "vscode": {
       "extensions": [
-        "contextmapper.context-mapper-vscode-extension"
+        "jebbs.plantuml",
+        "contextmapper.context-mapper-vscode-extension",
+        "vscjava.vscode-java-pack",
+        "asciidoctor.asciidoctor-vscode"
       ]
     }
   }

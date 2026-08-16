@@ -45,6 +45,24 @@ Domain PrestacionServiciosDelHogar{
         domainVisionStatement = "Gestionar la información de proveedores: perfil, servicios que prestan, cobertura geográfica y reputación."
     }
 
+    Subdomain MatchingYCobertura {
+        type = SUPPORTING_DOMAIN
+        domainVisionStatement = "Publica el trabajo a proveedores que coinciden en categoria, zona y disponibilidad; en siniestros, restringe ademas a la red homologada del partner. Mecanismo de soporte: el criterio de elegibilidad vive en Acreditacion y en ReglasDePartner; este subdominio las aplica."
+
+    }
+
+    Subdomain CoordinacionOperativa {
+        type = SUPPORTING_DOMAIN
+        domainVisionStatement = "Trabajo de los ~100 agentes de gestion: monitoreo de avance, novedades y disputas. Hoy es mayormente manual sobre el monolito. Soporta el core operacional; la vision TO-BE es que los agentes trabajen sobre excepciones, no sobre cada transicion de estado."
+
+    }
+
+    Subdomain EvidenciasYExpediente {
+        type = SUPPORTING_DOMAIN
+        domainVisionStatement = "Recoleccion, consolidacion y sincronizacion de evidencias (fotos, documentos, bitacora) exigidas por partners y por auditoria interna. Critico en siniestros; no es el modelo de Trabajo, es el expediente que lo hace oponible al partner."
+
+  }
+
     Subdomain Pagos{
         type = GENERIC_SUBDOMAIN
         domainVisionStatement = "Procesamiento de pagos y facturación por servicio con pasarelas externas."
@@ -53,6 +71,80 @@ Domain PrestacionServiciosDelHogar{
     Subdomain Autenticacion{
         type = GENERIC_SUBDOMAIN
         domainVisionStatement = "Autenticación y autorización de usuarios en la plataforma.  "
-    }    
+    }   
 
+    Subdomain NotificacionesYComunicaciones {
+        type = GENERIC_SUBDOMAIN
+        domainVisionStatement = "Mensajeria a clientes, proveedores y partners. Generico. El contenido de negocio (que se notifica) lo deciden los contextos de origen."
+
+  }
+    
+     
+
+}
+
+BoundedContext CotizacionesBC {
+        type = CORE
+        implementationTechnology = "Microservice"
+    }
+
+    BoundedContext GestionServicioBC {
+        type = CORE
+        implementationTechnology = "Microservice"
+    }
+
+    BoundedContext MarketplaceBC {
+        type = CORE
+        implementationTechnology = "Microservice"
+    }
+
+    BoundedContext AlianzasB2B2CBC {
+        type = CORE
+        implementationTechnology = "Microservice"
+    }
+
+    BoundedContext VerificacionesBC {
+        type = CORE
+        implementationTechnology = "Microservice"
+    }
+
+    BoundedContext FintechBC {
+        type = CORE
+        implementationTechnology = "Microservice"
+    }
+
+    BoundedContext AsistenteIABC {
+        type = CORE
+        implementationTechnology = "Microservice"
+    }
+
+    BoundedContext ControlCalidadBC {
+        type = SUPPORTING
+        implementationTechnology = "Microservice"
+    }
+
+    BoundedContext ProveedoresBC {
+        type = SUPPORTING
+        implementationTechnology = "Microservice"
+    }
+
+    BoundedContext PagosBC {
+        type = GENERIC
+        implementationTechnology = "External Service"
+    }
+
+    BoundedContext AutenticacionBC {
+        type = GENERIC
+        implementationTechnology = "Shared Service"
+    }
+
+    ContextMap {
+        type = ORGANIZATIONAL_MAP
+        
+        CotizacionesBC [P]<->[P] GestionServicioBC
+        GestionServicioBC [P]<->[P] MarketplaceBC
+        MarketplaceBC [U,OHS]<->[D] ProveedoresBC
+        VerificacionesBC [P]<->[P] ProveedoresBC
+        FintechBC [P]<->[P] PagosBC
+    }
 }
